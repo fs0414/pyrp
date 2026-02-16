@@ -15,7 +15,7 @@
     in {
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = with pkgs; [
-          python312
+          python314
           uv
           # Jupyter
         ];
