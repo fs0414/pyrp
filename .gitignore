@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 環境
+.venv/
+.direnv/
+
+# OS
+.DS_Store
