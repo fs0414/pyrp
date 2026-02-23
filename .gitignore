@@ -9,6 +9,7 @@ dist/
 # 環境
 .venv/
 .direnv/
+.envrc
 
 # OS
 .DS_Store

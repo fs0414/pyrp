@@ -1,0 +1,49 @@
+version: "3"
+
+tasks:
+  default:
+    desc: タスク一覧を表示
+    cmds:
+      - task --list
+
+  run:
+    desc: main.py を実行
+    cmds:
+      - uv run python main.py
+
+  test:
+    desc: テストを実行
+    cmds:
+      - uv run pytest -v
+
+  lint:
+    desc: ruff でリントチェック
+    cmds:
+      - uv run ruff check .
+
+  lint:fix:
+    desc: ruff で自動修正
+    cmds:
+      - uv run ruff check --fix .
+
+  fmt:
+    desc: ruff でフォーマット
+    cmds:
+      - uv run ruff format .
+
+  check:
+    desc: lint + test をまとめて実行
+    cmds:
+      - task: lint
+      - task: fmt
+      - task: test
+
+  sync:
+    desc: 依存関係を同期
+    cmds:
+      - uv sync
+
+  lab:
+    desc: Jupyter Lab を起動
+    cmds:
+      - uv run jupyter lab
